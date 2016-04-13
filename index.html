@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Society Education Programs</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:600,700|Great+Vibes' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css" >
 </head>
@@ -14,34 +15,34 @@
 		<section>
 			<div id="form_wrap">
 				<form id="logo_form">
-					<select name="program_type" id="first_select">
-
-							<option selected disabled>PROGRAM TYPE</option>
-							<option>SEARCH ALL</option>
+					<select name="program_type" class="first_select">
+							<option selected disabled hidden>PROGRAM TYPE</option>
+							<option class="search_all">SEARCH ALL</option>
 							<option>SCHOLARSHIP PROGRAM</option>
 							<option>LOAN PROGRAM</option>
 					</select>
 					<select name="education_level">
-							<option selected disabled>EDUCATION LEVEL</option>
-							<option>SEARCH ALL</option>
+							<option selected disabled hidden>EDUCATION LEVEL</option>
+							<option class="search_all">SEARCH ALL</option>
 							<option>KINDERGARTEN</option>
 							<option>HIGH SCHOOL</option>
 					</select>
-					<!-- <div id="select_options">
-						<ul name="program_type">
-							<li value="" class="disabled">PROGRAM TYPE</li>
-							<li value="SEARCH+ALL">SEARCH ALL</li>
-							<li value="SCHOLARSHIP+PROGRAM">SCHOLARSHIP PROGRAM</li>
-							<li value="LOAN+PROGRAM">LOAN PROGRAM</li>
+					<!---
+					<div id="select_options">
+						<ul name="program_type" class="first_select">
+							<li value="" class="disabled">PROGRAM TYPE<i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+							<li value="SEARCH+ALL" class="search_all options">SEARCH ALL<i class="fa fa-chevron-up" aria-hidden="true"></i></li>
+							<li value="SCHOLARSHIP+PROGRAM" class="options">SCHOLARSHIP PROGRAM</li>
+							<li value="LOAN+PROGRAM" class="options">LOAN PROGRAM</li>
 						</ul>
 						<ul name="education_level">
-							<li value="" class="disabled">EDUCATION LEVEL</li>
-							<li value="SEARCH+ALL">SEARCH ALL</li>
-							<li value="KINDERGARTEN">KINDERGARTEN</li>
-							<li value="HIGH+SCHOOL">HIGH SCHOOL</li>
+							<li value="" class="disabled">EDUCATION LEVEL<i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+							<li value="SEARCH+ALL" class="search_all options">SEARCH ALL <i class="fa fa-chevron-up" aria-hidden="true"></i></li>
+							<li value="KINDERGARTEN" class="options">KINDERGARTEN</li>
+							<li value="HIGH+SCHOOL" class="options">HIGH SCHOOL</li>
 						</ul>
-					</div> -->
-
+					</div>
+					-->
 					<button id="submit" name="submit" type="submit">SEARCH</button>
 				</form>
 			</div>

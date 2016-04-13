@@ -1,11 +1,11 @@
 "use strict";
 
 $("#logo_form").submit(sendResults);
-/* $(".disabled").click(dropDown);
+//$(".disabled").click(dropDown);
 
- function dropDown () {
+/*function dropDown () {
 	$("li").css("display", "block");
-}
+};
 */
 
 function sendResults () {
