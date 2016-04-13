@@ -17,18 +17,37 @@ h1 {
 	margin-top: 50px;
 }
 
-select {
-	color: #d1d7b9;
-	width: 290px;
-	height: 40px;
-	margin-bottom: 10px;
+/* Search Form */
+
+#form_wrap {
+	background-color: #f4f4f4;
+	text-align: center;
+	padding: 90px 20px 20px;
+	z-index: 100;
+}
+
+#submit {
 	font-family: 'Raleway', sans-serif;
+	background-color: #9d222a;
+	color: #fff;
+	display: block;
+	margin: 0 auto;
+	height: 35px;
+	width: 130px;
+	padding: 5px;
 	font-weight: 700;
-	padding-left: 15px;
+	border: none;
+	z-index: 500;
 }
 
 .first_select {
 	margin-right: 10px;
+}
+
+#select_options {
+	position: absolute;
+    top: 140px;
+    left: 35.2%;
 }
 
 #select_options ul {
@@ -36,28 +55,12 @@ select {
     display: inline-block;
     text-align: left;
    	z-index: 1000;
+   	vertical-align: top;
 }
 
 #select_options ul > li {
 	list-style-type: none;
 }
-
-.first_select > .disabled i {
-	color: black;
-	margin-left: 145px;
-}
-
-.disabled i {
-	color: black;
-	margin-left: 126px;
-}
-
-li i {
-	color: black;
-	margin-left: 158px;
-	font-size: 12px !important;
-}
-
 
 .disabled {
 	color: #d1d7b9;
@@ -68,29 +71,9 @@ li i {
 	background-color: white;
 	display: inline-block;
 	border-bottom: none;
-	font-size: 12px;
+	font-size: 10px;
 }
 
-.active {
-	color: #d1d7b9;
-	width: 250px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	padding: 15px 5px 10px 20px;
-	background-color: white;
-	display: inline-block;
-	border-bottom: none;
-}
-
-option {
-	background-color: #e3dcdd;
-	color: #93716e;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	padding: 10px 0 10px 10px;
-	border-bottom: 1px solid #ccc;
-	font-size: 14px;
-}
 
 li {
 	background-color: #e3dcdd;
@@ -100,12 +83,24 @@ li {
 	padding: 10px 0 10px 10px;
 	border-bottom: 1px solid #ccc;
 	display: none;
-	font-size: 14px;
+	font-size: 12px;
+}
+
+i {
+	color: black;
+	float: right;
+}
+
+.options > i {
+	font-size: 12px !important;
+	margin-right: 5px;
 }
 
 .search_all {
 	color: #9d222a;
 }
+
+/* Logo Gallery */
 
 img {
 	width: 20%;
@@ -121,29 +116,8 @@ img {
 	padding: 20px;
 }
 
-#form_wrap {
-	background-color: #f4f4f4;
-	text-align: center;
-	padding: 90px 20px 20px;
-	z-index: 100;
-}
-
 #logo_wrap {
-	height: 700px;
-}
-
-#submit {
-	font-family: 'Raleway', sans-serif;
-	background-color: #9d222a;
-	color: #fff;
-	display: block;
-	margin: 0 auto;
-	height: 35px;
-	width: 130px;
-	padding: 5px;
-	font-weight: 700;
-	border: none;
-	z-index: 500;
+	height: 500px;
 }
 
 .display {
