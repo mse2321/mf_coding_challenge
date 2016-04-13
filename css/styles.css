@@ -4,7 +4,7 @@ body {
 }
 
 #container {
-	width: 800px;
+	width: 650px;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -14,34 +14,38 @@ h1 {
 	color: #9d222a;
 	text-align: center;
 	letter-spacing: 3px;
+	margin-top: 50px;
 }
 
 select {
 	color: #d1d7b9;
-	width: 300px;
+	width: 290px;
 	height: 40px;
 	margin-bottom: 10px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
+	padding-left: 15px;
+}
+
+#first_select {
+	margin-right: 10px;
 }
 
 option {
 	background-color: #e3dcdd;
 	color: #93716e;
 	font-family: 'Raleway', sans-serif;
-	font-weight: 600;
-	border-bottom: 2px solid #000;
+	font-weight: 700;
 	padding: 10px;
+	border-bottom: 2px solid #000;
 }
 
 img {
-	outline: 1px solid #000;
 	width: 20%;
 	margin: 0 10px;
 }
 
 .columns {
-	outline: 1px solid red;
 	vertical-align: top;
 	margin-top: 10px;
 }
@@ -62,7 +66,6 @@ option:hover {
 }
 
 #logo_wrap {
-	outline: 1px solid #000;
 	height: 700px;
 }
 
@@ -72,8 +75,8 @@ option:hover {
 	color: #fff;
 	display: block;
 	margin: 0 auto;
-	height: 30px;
-	width: 170px;
+	height: 35px;
+	width: 130px;
 	padding: 5px;
 	font-weight: 700;
 	border: none;

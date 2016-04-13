@@ -1,43 +1,65 @@
 "use strict";
 
+$("#logo_form").submit(sendResults);
+/* $(".disabled").click(dropDown);
+
+ function dropDown () {
+	$("li").css("display", "block");
+}
+*/
+
 function sendResults () {
 
-	var results = document.getElementById("logo_form").value;
+	var results = $(this).serialize();
+
+	var indexStart = results.indexOf("=") + 1;
+	var indexEnd = results.indexOf("&");
+	var indexStartSecondary = results.lastIndexOf("=") + 1;
+
+	var program = results.slice(indexStart, indexEnd);
+	var education = results.slice(indexStartSecondary);
 
 	console.log(results);
+	console.log(indexStart);
+	console.log(indexEnd);
 
-	displayProgramLogos(results);
-	displayEducationLogos(results);
+	console.log(program);
+	console.log(education);
+
+
+	displayProgramLogos(program);
+	displayEducationLogos(education);
+
+	return false;
+	
 };
 
-function displayProgramLogos (results){
+function displayProgramLogos (program){
 
-	if(program_type.value == "Scholorship+Program") {
-		var scholar_logos = document.getElementsByClassName('scholar');
-		scholar_logos.className = "selected";
+	if(program == "SCHOLARSHIP+PROGRAM") {
+		$(".scholar").addClass("selected");
+		$(".loan").removeClass("selected");
 
-	} else if (program_type.value == "Loan+Program") {
-		var scholar_logos = document.getElementsByClassName('loan');
-		scholar_logos.className = "selected";
+	} else if (program == "LOAN+PROGRAM") {
+		$(".loan").addClass("selected");
+		$(".scholar").removeClass("selected");
 
-	} else if (program_type.value == "Search+All") {
-		var scholar_logos = document.getElementsByClassName('display');
-		scholar_logos.className = "selected";
-	}
+	} else if (program == "SEARCH+ALL") {
+		$(".display").addClass("selected");
+	};
 };
 
-function displayEducationLogos (results){
+function displayEducationLogos (education){
 
-	if(education_level.value == "Kingdergarten") {
-		var scholar_logos = document.getElementsByClassName('k_garten');
-		scholar_logos.className = "selected";
+	if(education == "KINGDERGARTEN") {
+		$(".k_garten").addClass("selected");
+		$(".h_school").removeClass("selected");
 
-	} else if (education_level.value == "High+School") {
-		var scholar_logos = document.getElementsByClassName('h_school');
-		scholar_logos.className = "selected";
+	} else if (education == "HIGH+SCHOOL") {
+		$(".h_school").addClass("selected");
+		$(".k_garten").removeClass("selected");
 
-	} else if (education_level.value == "Search+All") {
-		var scholar_logos = document.getElementsByClassName('display');
-		scholar_logos.className = "selected";
-	}
+	} else if (education == "SEARCH+ALL") {
+		$("img").addClass("selected");
+	};
 };

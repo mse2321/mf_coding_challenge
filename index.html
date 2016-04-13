@@ -14,20 +14,35 @@
 		<section>
 			<div id="form_wrap">
 				<form id="logo_form">
-					<select name="program_type">
-						<option selected disabled>Program Type</option>
-						<option>Scholarship Program</option>
-						<option>Loan Program</option>
-						<option>Search All</option>
+					<select name="program_type" id="first_select">
+
+							<option selected disabled>PROGRAM TYPE</option>
+							<option>SEARCH ALL</option>
+							<option>SCHOLARSHIP PROGRAM</option>
+							<option>LOAN PROGRAM</option>
 					</select>
 					<select name="education_level">
-						<option selected disabled>Education Level</option>
-						<option>Search All</option>
-						<option>Kindergarten</option>
-						<option>High School</option>
+							<option selected disabled>EDUCATION LEVEL</option>
+							<option>SEARCH ALL</option>
+							<option>KINDERGARTEN</option>
+							<option>HIGH SCHOOL</option>
 					</select>
-					<output></output>
-					<button id="submit" name="submit" type="submit" onclick="sendResults()">Search</button>
+					<!-- <div id="select_options">
+						<ul name="program_type">
+							<li value="" class="disabled">PROGRAM TYPE</li>
+							<li value="SEARCH+ALL">SEARCH ALL</li>
+							<li value="SCHOLARSHIP+PROGRAM">SCHOLARSHIP PROGRAM</li>
+							<li value="LOAN+PROGRAM">LOAN PROGRAM</li>
+						</ul>
+						<ul name="education_level">
+							<li value="" class="disabled">EDUCATION LEVEL</li>
+							<li value="SEARCH+ALL">SEARCH ALL</li>
+							<li value="KINDERGARTEN">KINDERGARTEN</li>
+							<li value="HIGH+SCHOOL">HIGH SCHOOL</li>
+						</ul>
+					</div> -->
+
+					<button id="submit" name="submit" type="submit">SEARCH</button>
 				</form>
 			</div>
 			<div id="logo_wrap">
@@ -56,6 +71,7 @@
 		<footer>
 		</footer>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
 	<script src="js/app.js"></script>
 </body>
 </html>
