@@ -47,31 +47,82 @@ function sendResults (program, education) {
 // displays logos based on program criteria
 function displayLogos (program, education){
 
-	// handles program logos
-	if(program == "SCHOLARSHIP PROGRAM") {
+	if (program == "SCHOLARSHIP PROGRAM" && education == "SEARCH ALL") {
+		$(".kgarten").addClass("selected");
+		$(".hschool").addClass("selected");
 		$(".scholar").addClass("selected");
 		$(".loan").removeClass("selected");
 
-	} else if (program == "LOAN PROGRAM") {
+	} else if (program == "SCHOLARSHIP PROGRAM" && education == "KINGDERGARTEN") {
+		$(".kgarten").addClass("selected");
+		$(".scholar").addClass("selected");
+		$(".hschool").removeClass("selected");
+		$(".loan").removeClass("selected");
+
+	} else if (program == "SCHOLARSHIP PROGRAM" && education == "HIGH SCHOOL") {
+		$(".hschool").addClass("selected");
+		$(".scholar").addClass("selected");
+		$(".kgarten").removeClass("selected");
+		$(".loan").removeClass("selected");
+
+	}  else if (program == "LOAN PROGRAM" && education == "SEARCH ALL") {
+		$(".kgarten").addClass("selected");
+		$(".hschool").addClass("selected");
 		$(".loan").addClass("selected");
 		$(".scholar").removeClass("selected");
 
-	} else if (program == "SEARCH ALL") {
+	} else if (program == "LOAN PROGRAM" && education == "KINGDERGARTEN") {
+		$(".loan").addClass("selected");
+		$(".kgarten").addClass("selected");
+		$(".hschool").removeClass("selected");
+		$(".scholar").removeClass("selected");
+
+	}  else if (program == "LOAN PROGRAM" && education == "HIGH SCHOOL") {
+		$(".hschool").addClass("selected");
+		$(".loan").addClass("selected");
+		$(".kgarten").removeClass("selected");
+		$(".scholar").removeClass("selected");
+		
+	}  else if(education == "KINGDERGARTEN" && program == "LOAN PROGRAM") {
+		$(".loan").addClass("selected");
+		$(".kgarten").addClass("selected");
+		$(".hschool").removeClass("selected");
+		$(".scholar").removeClass("selected");
+
+	} else if(education == "KINGDERGARTEN" && program == "SCHOLARSHIP PROGRAM") {
+		$(".scholar").addClass("selected");
+		$(".kgarten").addClass("selected");
+		$(".hschool").removeClass("selected");
+		$(".loan").removeClass("selected");
+
+	} else if(education == "KINGDERGARTEN" && program == "SEARCH ALL") {
 		$(".scholar").addClass("selected");
 		$(".loan").addClass("selected");
-	};
+		$(".kgarten").addClass("selected");
+		$(".hschool").removeClass("selected");
 
-	// handles education logos
-	if(education == "KINGDERGARTEN") {
-		$(".k_garten").addClass("selected");
-		$(".h_school").removeClass("selected");
+	} else if (education == "HIGH SCHOOL" && program == "SCHOLARSHIP PROGRAM") {
+		$(".scholar").addClass("selected");
+		$(".hschool").addClass("selected");
+		$(".kgarten").removeClass("selected");
+		$(".loan").removeClass("selected");
 
-	} else if (education == "HIGH SCHOOL") {
-		$(".h_school").addClass("selected");
-		$(".k_garten").removeClass("selected");
+	} else if (education == "HIGH SCHOOL" && program == "LOAN PROGRAM") {
+		$(".loan").addClass("selected");
+		$(".hschool").addClass("selected");
+		$(".kgarten").removeClass("selected");
+		$(".scholar").removeClass("selected");
 
-	} else if (education == "SEARCH ALL") {
-		$(".k_garten").addClass("selected");
-		$(".h_school").addClass("selected");
+	} else if (education == "HIGH SCHOOL" && program == "SEARCH ALL") {
+		$(".scholar").addClass("selected");
+		$(".loan").addClass("selected");
+		$(".hschool").addClass("selected");
+		$(".kgarten").removeClass("selected");
+
+	} else if (program == "SEARCH ALL" && education == "SEARCH ALL") {
+		$(".scholar").addClass("selected");
+		$(".loan").addClass("selected");
+		$(".kgarten").addClass("selected");
+		$(".hschool").addClass("selected");
 	};
 };
