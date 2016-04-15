@@ -38,16 +38,16 @@ function secondSelection () {
 function sendResults (program, education) {
 
 	$("#submit").click(function() {
-		displayProgramLogos(program);
-		displayEducationLogos(education);
+		displayLogos(program, education);
 	})
 
 	return false;
 };
 
 // displays logos based on program criteria
-function displayProgramLogos (program){
+function displayLogos (program, education){
 
+	// handles program logos
 	if(program == "SCHOLARSHIP PROGRAM") {
 		$(".scholar").addClass("selected");
 		$(".loan").removeClass("selected");
@@ -57,13 +57,11 @@ function displayProgramLogos (program){
 		$(".scholar").removeClass("selected");
 
 	} else if (program == "SEARCH ALL") {
-		$(".display").addClass("selected");
+		$(".scholar").addClass("selected");
+		$(".loan").addClass("selected");
 	};
-};
 
-// displays logos based on education criteria
-function displayEducationLogos (education){
-
+	// handles education logos
 	if(education == "KINGDERGARTEN") {
 		$(".k_garten").addClass("selected");
 		$(".h_school").removeClass("selected");
@@ -73,6 +71,7 @@ function displayEducationLogos (education){
 		$(".k_garten").removeClass("selected");
 
 	} else if (education == "SEARCH ALL") {
-		$("img").addClass("selected");
+		$(".k_garten").addClass("selected");
+		$(".h_school").addClass("selected");
 	};
 };

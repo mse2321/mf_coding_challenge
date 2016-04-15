@@ -77,6 +77,7 @@ h1 {
 	display: inline-block;
 	border-bottom: none;
 	font-size: 10px;
+	position: relative;
 }
 
 
@@ -127,11 +128,13 @@ img {
 }
 
 .display {
-	opacity: .02;
+	 opacity: .05;
+    -webkit-filter: grayscale(100%);
 }
 
 .selected {
 	opacity: 1;
+	-webkit-filter: grayscale(0%);
 }
 
 @media screen and (max-width: 700px) {
@@ -156,6 +159,7 @@ img {
 	.disabled {
 		display: block;
 		width: initial;
+		position: relative;
 	}
 
 	#select_options {
@@ -167,6 +171,7 @@ img {
 
 	#select_options ul {
 		width: 100%;
+		position: absolute;
 	}
 
 	#select_options ul > li {
@@ -175,10 +180,17 @@ img {
 
 	.first_select {
 		margin-right: 0;
+		top: 20px;
+    	left: 0;
+    	right: 0;
+    	z-index: 9999 !important;
 	}
 
 	.second_select {
 		margin-top: 0;
+		top: 90px;
+    	left: 0;
+    	right: 0;
 	}
 
 	#submit {
