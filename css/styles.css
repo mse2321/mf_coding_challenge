@@ -43,6 +43,7 @@ h1 {
     top: 265px;
     left: 0;
     right: 0;
+    cursor: pointer;
 }
 
 .first_select {
@@ -65,6 +66,7 @@ h1 {
 #select_options ul > li {
 	list-style-type: none;
 	z-index: 1000;
+	cursor: pointer;
 }
 
 .disabled {
@@ -137,7 +139,7 @@ img {
 	-webkit-filter: grayscale(0%);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 339px) and (max-width: 700px) {
 	#container {
 		width: 100%;
 	}
@@ -205,4 +207,76 @@ img {
 		font-size: 26px;
 		margin-top: 20px;
 	}
+}
+
+@media screen and (max-width: 338px) {
+
+	#submit {
+		top: 250px;
+	}
+
+	#container {
+		width: 100%;
+	}
+
+	section {
+		width: 95%;
+    	margin: 0 auto;
+	}
+
+	#form_wrap {
+		padding: 0 20px 110px 20px;
+	}
+
+	#logo_wrap {
+	    height: 100%;
+	    margin-top: 20px;
+	}
+
+	.disabled {
+		display: block;
+		width: initial;
+		position: relative;
+	}
+
+	#select_options {
+		right: 0;
+    	left: 0;
+    	margin: 0 auto;
+    	width: 85%;
+	}
+
+	#select_options ul {
+		width: 100%;
+		position: absolute;
+	}
+
+	#select_options ul > li {
+		margin: 0 auto;
+	}
+
+	.first_select {
+		margin-right: 0;
+		top: 20px;
+    	left: 0;
+    	right: 0;
+    	z-index: 9999 !important;
+	}
+
+	.second_select {
+		margin-top: 0;
+		top: 90px;
+    	left: 0;
+    	right: 0;
+	}
+
+	img {
+		width: 16%;
+	}
+
+	h1 {
+		font-size: 26px;
+		margin-top: 20px;
+	}
+
 }
