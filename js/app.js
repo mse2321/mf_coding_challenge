@@ -133,5 +133,4 @@ function displayLogos (program, education){
 		$(".display").addClass("selected");
 	}
 
-	return false;
 };
