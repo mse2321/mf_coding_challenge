@@ -32,13 +32,17 @@ h1 {
 	background-color: #9d222a;
 	color: #fff;
 	display: block;
-	margin: 65px auto 0px auto;
+	margin: 0px auto;
 	height: 35px;
 	width: 130px;
 	padding: 5px;
 	font-weight: 700;
 	border: none;
 	z-index: 500;
+	position: absolute;
+    top: 265px;
+    left: 0;
+    right: 0;
 }
 
 .first_select {
@@ -47,8 +51,7 @@ h1 {
 
 #select_options {
 	position: absolute;
-    top: 200px;
-    left: 35.2%;
+	z-index: 9999;
 }
 
 #select_options ul {
@@ -61,11 +64,12 @@ h1 {
 
 #select_options ul > li {
 	list-style-type: none;
+	z-index: 1000;
 }
 
 .disabled {
 	color: #d1d7b9;
-	width: 250px;
+	width: 270px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	padding: 15px 5px 10px 20px;
@@ -128,4 +132,65 @@ img {
 
 .selected {
 	opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+	#container {
+		width: 100%;
+	}
+
+	section {
+		width: 95%;
+    	margin: 0 auto;
+	}
+
+	#form_wrap {
+		padding: 0 20px 110px 20px;
+	}
+
+	#logo_wrap {
+	    height: 100%;
+	    margin-top: 20px;
+	}
+
+	.disabled {
+		display: block;
+		width: initial;
+	}
+
+	#select_options {
+		right: 0;
+    	left: 0;
+    	margin: 0 auto;
+    	width: 85%;
+	}
+
+	#select_options ul {
+		width: 100%;
+	}
+
+	#select_options ul > li {
+		margin: 0 auto;
+	}
+
+	.first_select {
+		margin-right: 0;
+	}
+
+	.second_select {
+		margin-top: 0;
+	}
+
+	#submit {
+		top: 225px;
+	}
+
+	img {
+		width: 17%;
+	}
+
+	h1 {
+		font-size: 26px;
+		margin-top: 20px;
+	}
 }

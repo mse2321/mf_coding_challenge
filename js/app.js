@@ -1,13 +1,17 @@
 "use strict";
 
 $("#logo_form").submit(sendResults);
-$(".disabled").click(dropDown);
+$(".first_select > .disabled").click(dropDown);
+$(".second_select > .disabled").click(dropDown2);
 $(".first_select > .options").click(selection);
 $(".second_select > .options").click(secondSelection);
 
 // displays select options
 function dropDown () {
-	$("li").css("display", "block");
+	$(".first_select > .options").css("display", "block");
+};
+function dropDown2 () {
+	$(".second_select > .options").css("display", "block");
 };
 
 // sends data to sendResults of the selected item
