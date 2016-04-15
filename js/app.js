@@ -1,6 +1,6 @@
 "use strict";
 
-$("#logo_form").submit(sendResults);
+//$("#logo_form").submit(sendResults);
 $(".first_select > .disabled").click(dropDown);
 $(".second_select > .disabled").click(dropDown2);
 $(".first_select > .options").click(selection);
@@ -17,21 +17,28 @@ function dropDown2 () {
 // sends data to sendResults of the selected item
 function selection () {
 
-	var program = $(this).text();
-	$(".first_select > .disabled").html(program + "<i class='fa fa-chevron-down' aria-hidden='true'></i>");
+	var programChoice = $(this).text();
+	$(".first_select > .disabled").html(programChoice + "<i class='fa fa-chevron-down' aria-hidden='true'></i>");
 	$(".first_select > .options").css("display", "none");
 
-	sendResults(program);
-}
+	grabResults();
+};
 
 // sends data to sendResults of the second selected item
 function secondSelection () {
 
-	var education = $(this).text();
-	$(".second_select > .disabled").html(education + "<i class='fa fa-chevron-down' aria-hidden='true'></i>");
+	var educationChoice = $(this).text();
+	$(".second_select > .disabled").html(educationChoice + "<i class='fa fa-chevron-down' aria-hidden='true'></i>");
 	$(".second_select > .options").css("display", "none");
 
-	sendResults(education);
+	grabResults();
+};
+
+function grabResults () {
+	var program = $(".first_select > .disabled").text();
+	var education = $(".second_select > .disabled").text();
+
+	sendResults(program, education);
 }
 
 // runs a check to make sure the search button is clicked before executing
@@ -47,13 +54,16 @@ function sendResults (program, education) {
 // displays logos based on program criteria
 function displayLogos (program, education){
 
+	console.log(program);
+	console.log(education);
+
 	if (program == "SCHOLARSHIP PROGRAM" && education == "SEARCH ALL") {
 		$(".kgarten").addClass("selected");
 		$(".hschool").addClass("selected");
 		$(".scholar").addClass("selected");
 		$(".loan").removeClass("selected");
 
-	} else if (program == "SCHOLARSHIP PROGRAM" && education == "KINGDERGARTEN") {
+	} else if (program == "SCHOLARSHIP PROGRAM" && education == "KINDERGARTEN") {
 		$(".kgarten").addClass("selected");
 		$(".scholar").addClass("selected");
 		$(".hschool").removeClass("selected");
@@ -71,7 +81,7 @@ function displayLogos (program, education){
 		$(".loan").addClass("selected");
 		$(".scholar").removeClass("selected");
 
-	} else if (program == "LOAN PROGRAM" && education == "KINGDERGARTEN") {
+	} else if (program == "LOAN PROGRAM" && education == "KINDERGARTEN") {
 		$(".loan").addClass("selected");
 		$(".kgarten").addClass("selected");
 		$(".hschool").removeClass("selected");
@@ -83,19 +93,19 @@ function displayLogos (program, education){
 		$(".kgarten").removeClass("selected");
 		$(".scholar").removeClass("selected");
 		
-	}  else if(education == "KINGDERGARTEN" && program == "LOAN PROGRAM") {
+	}  else if(education == "KINDERGARTEN" && program == "LOAN PROGRAM") {
 		$(".loan").addClass("selected");
 		$(".kgarten").addClass("selected");
 		$(".hschool").removeClass("selected");
 		$(".scholar").removeClass("selected");
 
-	} else if(education == "KINGDERGARTEN" && program == "SCHOLARSHIP PROGRAM") {
+	} else if(education == "KINDERGARTEN" && program == "SCHOLARSHIP PROGRAM") {
 		$(".scholar").addClass("selected");
 		$(".kgarten").addClass("selected");
 		$(".hschool").removeClass("selected");
 		$(".loan").removeClass("selected");
 
-	} else if(education == "KINGDERGARTEN" && program == "SEARCH ALL") {
+	} else if(education == "KINDERGARTEN" && program == "SEARCH ALL") {
 		$(".scholar").addClass("selected");
 		$(".loan").addClass("selected");
 		$(".kgarten").addClass("selected");
@@ -120,9 +130,8 @@ function displayLogos (program, education){
 		$(".kgarten").removeClass("selected");
 
 	} else if (program == "SEARCH ALL" && education == "SEARCH ALL") {
-		$(".scholar").addClass("selected");
-		$(".loan").addClass("selected");
-		$(".kgarten").addClass("selected");
-		$(".hschool").addClass("selected");
-	};
+		$(".display").addClass("selected");
+	}
+
+	return false;
 };
