@@ -138,8 +138,7 @@ img {
 	opacity: 1;
 	-webkit-filter: grayscale(0%);
 }
-
-@media screen and (min-width: 339px) and (max-width: 700px) {
+@media screen and (min-width: 354px) and (max-width: 700px) {
 	#container {
 		width: 100%;
 	}
@@ -209,7 +208,7 @@ img {
 	}
 }
 
-@media screen and (max-width: 338px) {
+@media screen and (max-width: 353px) {
 
 	#submit {
 		top: 250px;
@@ -271,7 +270,7 @@ img {
 	}
 
 	img {
-		width: 16%;
+		width: 14%;
 	}
 
 	h1 {
